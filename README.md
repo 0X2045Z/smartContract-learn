@@ -29,7 +29,7 @@
   networks: {
     ganache: {
       url: `http://localhost:7545`,
-      accounts: [`b5ae735ef1d8fef86f390369e58d442749b9567a8659bbc3921a3a98d86de1ca`]
+      accounts: [`private key`]
     }
   }
 };
