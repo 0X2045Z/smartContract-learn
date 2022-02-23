@@ -18,3 +18,22 @@
   5.npm install @openzeppelin/contracts-upgradeable --save
   6.npm install --save-dev @nomiclabs/hardhat-waffle 'ethereum-waffle@^3.0.0' @nomiclabs/hardhat-ethers 'ethers@^5.0.0'
 
+  // --------------------------hardhat.config.js--------------------------------------
+  require("@nomiclabs/hardhat-ethers");
+
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+ module.exports = {
+  solidity: "0.8.2",
+  networks: {
+    ganache: {
+      url: `http://localhost:7545`,
+      accounts: [`b5ae735ef1d8fef86f390369e58d442749b9567a8659bbc3921a3a98d86de1ca`]
+    }
+  }
+};
+
+// npx hardhat run ./scripts/ganache/deploy_erc20.js --network ganache
+------------------------------------------------------------------------------------//
+
