@@ -8,6 +8,7 @@
   4.npm install @openzeppelin/contracts --save
   5.npm install @openzeppelin/contracts-upgradeable --save
   6.npm install --save-dev @nomiclabs/hardhat-waffle 'ethereum-waffle@^3.0.0' @nomiclabs/hardhat-ethers 'ethers@^5.0.0'
+  7.npm install --save-dev @openzeppelin/hardhat-upgrades
 # I will use this repositories to document my learning about smart contracts,use:hardhat+openzeppelin+ethers.js
 # 1.First pull code,You need execute：
   1.npm init --yes
@@ -17,19 +18,35 @@
   4.npm install @openzeppelin/contracts --save
   5.npm install @openzeppelin/contracts-upgradeable --save
   6.npm install --save-dev @nomiclabs/hardhat-waffle 'ethereum-waffle@^3.0.0' @nomiclabs/hardhat-ethers 'ethers@^5.0.0'
-
-
+  7.npm install --save-dev @openzeppelin/hardhat-upgrades
 
 
 # Backup
   // --------------------------hardhat.config.js--------------------------------------
   require("@nomiclabs/hardhat-ethers");
+require('@openzeppelin/hardhat-upgrades');
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
  module.exports = {
-  solidity: "0.8.2",
+  solidity: {
+    compilers: [
+      { version: "0.8.2", settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200
+          }
+        } 
+      },{ version: "0.5.16", settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200
+          }
+        }
+      }
+    ],
+  },
   networks: {
     ganache: {
       url: `http://localhost:7545`,
@@ -40,4 +57,3 @@
 
 // npx hardhat run ./scripts/ganache/deploy_erc20.js --network ganache
 ------------------------------------------------------------------------------------//
-
