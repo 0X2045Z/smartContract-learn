@@ -5,7 +5,7 @@
   2.执行 ‘npx hardhat’，选择 ‘Create an empty hardhat.config.js’
 # I will use this repositories to document my learning about smart contracts,use:hardhat+openzeppelin+ethers.js
 # 1.First pull code,You need execute：
-  1.Initialize project dependencies using 'npm init --yes'
+  1.Initialize project dependencies using 'sh init.sh'
   2.Execute ‘npx hardhat’, and ‘Create an empty hardhat.config.js’
 
 # Backup
