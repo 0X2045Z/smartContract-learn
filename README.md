@@ -1,17 +1,14 @@
 # smartContract-learn
 # 这个库用来记录我学习智能合约的过程,使用的框架是：hardhat+openzeppelin+ethers.js
-# 1.第一次拉取代码，你需要在文件夹内执行：
-  1.执行 ‘sh init.sh’来下载项目依赖
-  2.执行 ‘npx hardhat’，选择 ‘Create an empty hardhat.config.js’
+第一次拉取代码，你需要在文件夹内执行：‘sh init.sh’并选择 ‘Create an empty hardhat.config.js’
 # I will use this repositories to document my learning about smart contracts,use:hardhat+openzeppelin+ethers.js
-# 1.First pull code,You need execute：
-  1.Initialize project dependencies using 'sh init.sh'
-  2.Execute ‘npx hardhat’, and ‘Create an empty hardhat.config.js’
+First time when you cloned this project.You should execute’sh init.sh’,and chose ‘Create an empty hardhat.config.js’.
 
 # Backup
   // --------------------------hardhat.config.js--------------------------------------
   require("@nomiclabs/hardhat-ethers");
 require('@openzeppelin/hardhat-upgrades');
+require('@nomiclabs/hardhat-waffle');
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
