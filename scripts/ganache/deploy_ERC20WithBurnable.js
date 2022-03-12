@@ -11,7 +11,7 @@ async function main() {
 
     let amount = 10**8;
     const Token = await ethers.getContractFactory("ERC20WithBurnable");
-    const token = await Token.deploy('testB','BBA',amount);
+    const token = await Token.deploy('testB','BBB',amount);
     await token.deployed();
 
     console.log("Token address:", token.address);
@@ -27,3 +27,4 @@ main()
 // npx hardhat run ./scripts/ganache/deploy_ERC20WithBurnable.js --network ganache
 // address  
 // BBA 0xB0eF2a3Df652eEB27DC4345Ba182f46519B2f00F
+// BBB 0x4c07390759Cff41f2AC12f24668ac0F581B27eBc
