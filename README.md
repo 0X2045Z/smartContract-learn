@@ -41,3 +41,19 @@ require('@nomiclabs/hardhat-waffle');
 
 // npx hardhat run ./scripts/ganache/deploy_erc20.js --network ganache
 ------------------------------------------------------------------------------------//
+require("@nomiclabs/hardhat-ethers");
+require('@openzeppelin/hardhat-upgrades');
+require('@nomiclabs/hardhat-waffle');
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+  solidity: "0.8.2",
+  networks: {
+    ganache: {
+      url: `http://localhost:7545`,
+      accounts: [`private key`]
+    }
+  }
+};
+------------------------------------------------------------------------------------//
