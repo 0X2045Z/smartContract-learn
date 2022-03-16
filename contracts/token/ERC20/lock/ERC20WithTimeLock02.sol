@@ -20,7 +20,8 @@ contract ERC20WithTimeLock02 is IERC20WithTimeLock02, TokenTimelockUpgradeable {
     function _ERC20WithTimeLock02_init(
         address _token, 
         address _beneficiary, 
-        uint256 _releaseTime) external onlyInitializing {
-            __TokenTimelock_init(IERC20Upgradeable(_token), _beneficiary, _releaseTime);
+        uint256 _releaseTime) public override onlyInitializing {
+            IERC20Upgradeable token = IERC20Upgradeable(_token);
+            __TokenTimelock_init(token, _beneficiary, _releaseTime);
         }
 }
