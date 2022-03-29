@@ -34,7 +34,7 @@ contract ERC20WithTimeLockFactory {
             bytes32 salt = keccak256(abi.encodePacked(msg.sender, msg.sender));
             // deploy
             _ERC20WithTimeLockAddr = deploy(bytecode, salt);
-            IERC20WithTimeLock02(_ERC20WithTimeLockAddr).
+            IERC20WithTimeLock02(_ERC20WithTimeLockAddr).  
                     _ERC20WithTimeLock02_init(_token, _beneficiary, _releaseTime);
             // 更新受益人mapping
             ERC20WithTimeLockInfo[] storage _linfos = getERC20WithTimeLock[_beneficiary];
